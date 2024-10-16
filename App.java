@@ -8,7 +8,10 @@ class App {
         String userChoice;
         String userInput;
         int shiftValue;
+
+        //setting up a while loop
         while(true){
+            
             //User Interface
             System.out.println("Enter (e) for Encryption, (d) for Decryption. Return to exit");
             userChoice = sc.nextLine().toLowerCase();
@@ -40,6 +43,7 @@ class App {
 
     public static String encrypt(String userInput, int shiftValue){
         StringBuilder encryptedString = new StringBuilder();
+        
         // Variable turning string Input to character so that we can
         //  preform mathematical operations on it.
         char inputToChar;
@@ -54,6 +58,7 @@ class App {
         }
         return "Encrypted String: " + encryptedString.toString();
     }
+    
     public static String decrypt(String userInput, int shiftValue){
         StringBuilder decryptedString = new StringBuilder();
         char inputToChar;
